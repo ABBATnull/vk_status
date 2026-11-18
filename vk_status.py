@@ -1,18 +1,16 @@
-#мой id в вк 195777006
-
 import vk
 import requests
 
 from bs4 import BeautifulSoup
 
 def vk_oath_n_status_posting(string):
- access_token = 'bf012164c88f5aa88f7368chip45d4a15cfc5b2133ngw26ca4bf1qplmna6915ab84d6i96d330eipklah67'
- v = '5.95'
+ access_token = '' #введи свой вк токен
+ v = '5.95' #уже поновее есть, обнови версию
 
  # Подключение к VK API
  session = vk.Session(access_token=access_token)
  api = vk.API(session, v=v)
- api.status.set (user_id = 195777006, text = string)
+ api.status.set (user_id = '', text = string) #введи сюда свой vk id
 
 def parsing_weather_dol_course():
  url_bank = 'https://finance.rambler.ru/currencies/'
